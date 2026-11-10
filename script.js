@@ -7,6 +7,8 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON)
 const chatbox = document.getElementById('box')
 const input = document.getElementById('msgin')
 const send = document.getElementById('send')
+const user = document.getElementById('username')
+const sendun = document.getElementById('sendun')
 
 async function loadmsg() {
   const { data, error } = await supabase.rpc('get_recent_messages')
@@ -30,6 +32,21 @@ send.addEventListener('click', async () => {
     input.value = ''
     // Forzamos la recarga inmediata de los mensajes en pantalla
     await loadmsg()
+  }
+})
+
+sendun.addEventListener('click', async () => {
+  const usernamev = user.value.trim()
+
+  const { data, error } = await supabase
+    .from('messages')
+    .insert([{username: usernamev}])
+    .select()
+
+  if (error) {
+    console.error()
+  } else {
+    user.value = ''
   }
 })
 
