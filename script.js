@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabasejs'
 
-const SUPABASE_URL = ""
-const SUPABASE_ANON = ""
+const SUPABASE_URL = "https://tetjkynfqavnqrzzbbul.supabase.co"
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRldGpreW5mcWF2bnFyenpiYnVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQyNzE5NDYsImV4cCI6MjEwOTg0Nzk0Nn0.T1H7AD0MQ0658cH9KaamBO3_oZjY6fiUqE_kY3AevUY"
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON)
 
 const chatbox = document.getElementById(box)
