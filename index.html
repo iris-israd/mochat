@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mochat!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mochat!</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+        }
+      }
+    </script>
 </head>
 <body>
-	<h1>Welcome to Mochat!</h1>
-	<div id="box"></div>
-	<input type="text" id="msgin" placeholder="Type in a message" />
-	<button id="send">Send</button>
+    <h1>Welcome to Mochat!</h1>
+    <div id="box"></div>
+    <input type="text" id="msgin" placeholder="Type in a message" />
+    <button id="send">Send</button>
 
-	<script src="https://jsdelivr.net"></script>
     <script type="module" src="script.js"></script>
 </body>
 </html>
