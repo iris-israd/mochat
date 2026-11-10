@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mochat!</title>
+</head>
+<body>
+    <h1>Welcome to Mochat!</h1>
+
+    <!-- Sección para el nombre de usuario -->
+    <div>
+        <input type="text" id="username" placeholder="Tu nombre de usuario" />
+        <button id="sendun">Set Username</button>
+    </div>
+
+    <br>
+
+    <!-- Caja de chat y envío de mensajes -->
+    <div id="box" style="border: 1px solid #ccc; height: 200px; overflow-y: scroll; margin-bottom: 10px; padding: 5px;"></div>
+    <input type="text" id="msgin" placeholder="Type in a message" />
+    <button id="send">Send</button>
+
     <script type="importmap">
       {
         "imports": {
@@ -11,15 +28,6 @@
         }
       }
     </script>
-</head>
-<body>
-    <h1>Welcome to Mochat!</h1>
-    <div id="box"></div>
-    <input type="text" id="msgin" placeholder="Type in a message" />
-    <button id="send">Send</button>
-    <input type="text" id="userna" placeholder="Type in a username" />
-    <button id="sendun">Send</button>
-
     <script type="module" src="script.js"></script>
 </body>
 </html>
