@@ -19,15 +19,18 @@ async function loadmsg() {
 }
 
 send.addEventListener('click', async () => {
-  const content = input.value
+  const content = input.value.trim()
   if (!content) return
 
   const { error } = await supabase.rpc('post_message', { message_text: content })
+
   if (error) {
-    console.log("ERROR:")
-    console.error(error)
+    console.error("Error al enviar mensaje:", error)
+    alert("Error al enviar mensaje: " + error.message)
   } else {
     input.value = ''
+    // Carga los mensajes de nuevo para asegurar que se muestre en pantalla
+    await loadmsg()
   }
 })
 
